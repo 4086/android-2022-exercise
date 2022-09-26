@@ -1,4 +1,4 @@
-package com.example.doublenotify
+package com.example.notiaddex
 
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
