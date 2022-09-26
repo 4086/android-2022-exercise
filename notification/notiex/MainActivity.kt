@@ -1,4 +1,4 @@
-package com.example.noitex
+package com.example.notiex
 
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
