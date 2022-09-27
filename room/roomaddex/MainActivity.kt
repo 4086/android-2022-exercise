@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.roomaddex.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var myDao: MyDAO
