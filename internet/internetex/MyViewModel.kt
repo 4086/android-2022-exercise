@@ -13,7 +13,7 @@ class MyViewModel : ViewModel() {
     private lateinit var api: RestApi
 
     val response = MutableLiveData<String>()
-    var uname: String= ""
+    var name: String= ""
 
     init {
         retrofitInit()
@@ -23,7 +23,7 @@ class MyViewModel : ViewModel() {
     fun refreshData() {
         viewModelScope.launch {
             try {
-                val repos = api.listRepos(uname)
+                val repos = api.listRepos(name)
                 response.value = StringBuilder().apply {
                     repos.forEach {
                         append(it.name)
