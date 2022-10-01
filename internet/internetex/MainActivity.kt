@@ -17,10 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.query).setOnClickListener {
             if (findViewById<EditText>(R.id.username).text.isNotEmpty()) {
-                viewModel.uname = findViewById<EditText>(R.id.username).text.toString()
+                viewModel.name = findViewById<EditText>(R.id.username).text.toString()
                 viewModel.response.observe(this) {
                     findViewById<TextView>(R.id.textView).text = it
                 }
+                viewModel.refreshData()
             }
         }
     }
