@@ -33,11 +33,16 @@ class MyViewModel : ViewModel() {
                         append("\n")
                     }
                 }.toString()
-                if (name in mutableMap) {}
-                else { mutableMap[name] = response.value!! }
+                if (name !in mutableMap) {
+                    mutableMap[name] = response.value!!
+                }
             } catch (e: Exception) {
-                if (name in mutableMap) { response.value = mutableMap[name] }
-                else { response.value = "Failed to connect to the server" }
+                if (name in mutableMap) {
+                    response.value = mutableMap[name]
+                }
+                else {
+                    response.value = "Failed to connect to the server"
+                }
             }
         }
     }
