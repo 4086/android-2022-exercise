@@ -13,7 +13,7 @@ class MyViewModel : ViewModel() {
     private lateinit var api: RestApi
 
     val response = MutableLiveData<String>()
-    val mutableMap = mutableMapOf<String, String>()
+    private val mutableMap = mutableMapOf<String, String>()
     var name: String= ""
 
     init {
